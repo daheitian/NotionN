@@ -26,7 +26,7 @@ const BLOG = {
 
    AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || '小信号', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || '设计  思考  写作', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'xiaoxinhao.top', // 网站地址
+  LINK: process.env.NEXT_PUBLIC_LINK || ''https://xiaoxinhao.top', // 网站地址
   KEYWORDS: process.env.NEXT_PUBLIC_KEYWORD || 'Notion, 博客', // 网站关键词 英文逗号隔开
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
@@ -545,9 +545,9 @@ const BLOG = {
     process.env.ENABLE_CACHE ||
     process.env.npm_lifecycle_event === 'build' ||
     process.env.npm_lifecycle_event === 'export', // 在打包过程中默认开启缓存，开发或运行时开启此功能意义不大。
-  isProd: process.env.VERCEL_ENV === 'production' || process.env.EXPORT, // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)  isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
-  BUNDLE_ANALYZER: process.env.ANALYZE === 'true' || false, // 是否展示编译依赖内容与大小
-  VERSION: process.env.NEXT_PUBLIC_VERSION // 版本号
+isProd: process.env.VERCEL_ENV === 'production' || process.env.EXPORT, // distinguish between development and production environment
+BUNDLE_ANALYZER: process.env.ANALYZE === 'true' || false, // 是否展示编译依赖内容与大小
+VERSION: process.env.NEXT_PUBLIC_VERSION // 版本号
 }
 
 module.exports = BLOG
