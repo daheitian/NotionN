@@ -81,6 +81,7 @@
     "ioredis": "^5.11.1",
     "js-md5": "^0.8.3",
     "js-sha256": "^0.11.1",
+    "lodash.throttle": "^4.1.1",
     "memory-cache": "^0.2.0",
     "next": "^14.2.30",
     "notion-client": "7.10.0",
