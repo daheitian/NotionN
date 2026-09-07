@@ -27,12 +27,18 @@ const BlogArchiveItem = ({ posts = [], archiveTitle }) => {
                 <div id={post?.publishDay}>
                   <span className='text-gray-400'>{post.date?.start_date}</span>{' '}
                   &nbsp;
-                  <Link
-                    href={post?.href}
-                    passHref
-                    className='dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-gray-600'>
-                    {post.title}
-                  </Link>
+                  {post?.href ? (
+                    <Link
+                      href={post?.href}
+                      passHref
+                      className='dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-gray-600'>
+                      {post.title}
+                    </Link>
+                  ) : (
+                    <span className='dark:text-gray-400 overflow-x-hidden text-gray-600'>
+                      {post.title}
+                    </span>
+                  )}
                 </div>
               </li>
             )
